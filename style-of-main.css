@@ -49,7 +49,7 @@ header{
   border-top: 1px solid rgba(255, 255, 255, 0.5);
   border-left: 1px solid rgba(255, 255, 255, 0.5);
   backdrop-filter: blur(5px);
-  z-index: -10;
+  z-index: 10;
   border-radius: 25px;
   margin: auto;
   position: relative;
@@ -107,6 +107,21 @@ header .navbar{
 .navbar .buttons input:hover{
   transform: scale(0.97);
 }
+
+.button {
+  outline: none;
+  color: #000;
+  font-size: 18px;
+  font-weight: 500;
+  border-radius: 12px;
+  padding: 6px 15px;
+  border: none;
+  margin: 0 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background-image: linear-gradient( 135deg, #F5E5D5  10%, #C5D1EB 100%);
+  }
+
  header .text-content{
    width: 40%;
    margin: 100px 0 0 50px;
