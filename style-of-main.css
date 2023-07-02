@@ -120,6 +120,7 @@ header .navbar{
   cursor: pointer;
   transition: all 0.3s ease;
   background-image: linear-gradient( 135deg, #F5E5D5  10%, #C5D1EB 100%);
+  text-decoration: none;
   }
 
  header .text-content{
@@ -129,6 +130,13 @@ header .navbar{
 .text-content h2{
   font-size: 27px;
   font-weight: 600;
+}
+.text-content h3{
+  font-size: 27px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  position: relative;
 }
 .text-content p{
   font-size: 15px;
