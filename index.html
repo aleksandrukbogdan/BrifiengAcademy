@@ -2,22 +2,37 @@
 <html lang="ru" dir="ltr">
   <head>
     <meta charset="UTF-8">
-    <title> Briefing Academy | CodingLab </title>
+    <title> Briefing Academy</title>
     <link rel="stylesheet" href="style-of-main.css">
     <link rel="stylesheet" href="style-of-card.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
    </head>
 <body>
-
+<div class="newhead">
+  <nav class="navbar1">
+    <div class="logo1"><a href="">>Brifieng Академия</a></div>
+    <ul class="menu1">
+      <li><a href="#courses">Курсы</a></li>
+      <li><a href="#about">О нас</a></li>
+      <li><a href="#teachers">Преподаватели</a></li>
+      <li><a href="#contacts">Контакты</a></li>
+    </ul>
+    <div class="buttons">
+      <!--<a href="login.html" class="button">Login</a>
+      <input type="button" value="Register"> -->
+      <a href="reg.html" class="button">Записаться на пробное занятие</a>
+    </div>
+  </nav>
+</div>
   <header>
     <nav class="navbar">
       <div class="logo"><a href="">>Brifieng Академия</a></div>
       <ul class="menu">
-        <li><a href="#">Курсы</a></li>
-        <li><a href="#">О нас</a></li>
-        <li><a href="#">Преподаватели</a></li>
-        <li><a href="#">Контакты</a></li>
+        <li><a href="#courses">Курсы</a></li>
+        <li><a href="#about">О нас</a></li>
+        <li><a href="#teachers">Преподаватели</a></li>
+        <li><a href="#contacts">Контакты</a></li>
       </ul>
       <div class="buttons">
         <!--<a href="login.html" class="button">Login</a>
@@ -31,9 +46,9 @@
     </div>
   </header>
   
-  <div class="container">
-    <!--<input type="radio" name="dot" id="one">
-    <input type="radio" name="dot" id="two">-->
+  <div id ="courses" class="container">
+    <input type="radio" name="dot" id="one">
+    <input type="radio" name="dot" id="two">
     <div class="text-content">
       <h3>Наши преподаватели</h3>
     </div>
@@ -150,8 +165,45 @@
       <label for="two" class="two"></label>
     </div>
   </div>
-  <div class="container">
+  <div id ="about" class="container">
 
   </div>
+  <div id ="teachers" class="container">
+
+  </div>
+  <div id ="contacts" class="container">
+
+  </div>
+  <script>
+      window.addEventListener('scroll', function() {
+        var container = document.querySelector('.container');
+        var scrollPercentage = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
+        container.style.background = 'linear-gradient(135deg, #000 10%, #8FB4D1 100%) ' + scrollPercentage + '%';
+      });
+      var menuItems = document.querySelectorAll('li');
+
+      menuItems.forEach(function(item) {
+        item.addEventListener('click', function(event) {
+          event.preventDefault();
+          var target = this.querySelector('a').getAttribute('href');
+          var targetElement = document.querySelector(target);
+          targetElement.scrollIntoView({ behavior: 'smooth' });
+        });
+      });
+      window.addEventListener('scroll', function() {
+        var navbar = document.querySelector('.navbar');
+        var header = document.querySelector('.header');
+        var scrollPosition = window.pageYOffset;
+        var newhead = document.querySelector('.newhead');
+  
+        if (scrollPosition > 0) {
+          navbar.classList.add('scroll');
+          newhead.classList.add('animation')
+        } else {
+          navbar.classList.remove('scroll');
+          newhead.classList.remove('animation')
+        }
+      });
+    </script>
 </body>
 </html>
