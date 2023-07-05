@@ -136,6 +136,8 @@ header.scroll{
   opacity: 1;
   transition: all 1.0s;
   transform: translateY(0%);
+
+  transform: translateY(-100%);
 }
 .navbar{
   margin: auto;

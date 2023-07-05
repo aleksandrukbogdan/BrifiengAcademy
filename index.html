@@ -47,8 +47,6 @@
   </header>
   
   <div id ="courses" class="container">
-    <input type="radio" name="dot" id="one">
-    <input type="radio" name="dot" id="two">
     <div class="text-content">
       <h3>Наши преподаватели</h3>
     </div>
@@ -171,6 +169,11 @@
   <div id ="teachers" class="container">
 
   </div>
+
+  </div>
+  <div id ="teachers" class="container">
+
+  </div>
   <div id ="contacts" class="container">
 
   </div>
@@ -202,6 +205,19 @@
         } else {
           navbar.classList.remove('scroll');
           newhead.classList.remove('animation')
+        var header = document.querySelector('header');
+        var scrollPosition = window.pageYOffset;
+  
+        if (scrollPosition > 0) {
+          navbar.classList.add('scroll');
+        } else {
+          navbar.classList.remove('scroll');
+        }
+
+        if (scrollPosition > 0) {
+          header.classList.add('scroll');
+        } else {
+          header.classList.remove('scroll');
         }
       });
     </script>
